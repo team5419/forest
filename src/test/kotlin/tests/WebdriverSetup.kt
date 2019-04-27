@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.remote.RemoteWebDriver
 import org.openqa.selenium.remote.DesiredCapabilities
 
-import org.team5499.dashboard.Utils
+import org.team5419.tsunami.Utils
 
 import java.net.URL
 

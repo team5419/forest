@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Tag
 
 import javax.imageio.ImageIO
 
-import org.team5499.dashboard.Dashboard
-import org.team5499.dashboard.StringChooser
+import org.team5419.tsunami.Dashboard
+import org.team5419.tsunami.StringChooser
 
 @Tag("playground")
 class PlaygroundTest {

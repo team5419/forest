@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.json.JSONObject
 
-import org.team5499.dashboard.Config
+import org.team5419.tsunami.Config
 
 class ConfigTest {
 

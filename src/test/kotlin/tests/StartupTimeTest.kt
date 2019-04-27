@@ -2,7 +2,7 @@ package tests
 
 import org.junit.jupiter.api.Test
 
-import org.team5499.dashboard.DashboardVar
+import org.team5419.tsunami.DashboardVar
 
 class StartupTimeTest {
 

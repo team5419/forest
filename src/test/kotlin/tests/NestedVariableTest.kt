@@ -6,9 +6,9 @@ import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.fail
 
-import org.team5499.dashboard.Dashboard
-import org.team5499.dashboard.DashboardVar
-import org.team5499.dashboard.DashboardException
+import org.team5419.tsunami.Dashboard
+import org.team5419.tsunami.DashboardVar
+import org.team5419.tsunami.DashboardException
 
 class NestedVariableTest {
 

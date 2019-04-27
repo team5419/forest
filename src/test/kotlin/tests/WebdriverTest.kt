@@ -14,7 +14,7 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.interactions.Actions
 import org.openqa.selenium.By
 
-import org.team5499.dashboard.Dashboard
+import org.team5419.tsunami.Dashboard
 
 @Tag("webdriver")
 class WebdriverTest {

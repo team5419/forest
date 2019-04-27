@@ -1,6 +1,6 @@
 
   .navbar {
-    background-color: #0b3311;
+    background-color: #cc0000;
   }
   .navbar .navbar-brand {
     color: #cdcdcd;
@@ -29,7 +29,7 @@
     color: #ffffff;
   }
   .navbar .navbar-nav .dropdown-menu {
-    background-color: #0b3311;
+    background-color: #cc0000;
     border-color: #cdcdcd;
   }
   .navbar .navbar-nav .dropdown-menu .dropdown-item {
@@ -39,10 +39,10 @@
   .navbar .navbar-nav .dropdown-menu .dropdown-item:focus,
   .navbar .navbar-nav .dropdown-menu .dropdown-item.active {
     color: #ffffff;
-    background-color: #0b3311;
+    background-color: #cc0000;
   }
   .navbar .navbar-nav .dropdown-menu .dropdown-divider {
-    border-top-color: #0b3311;
+    border-top-color: #cc0000;
   }
   .navbar .navbar-nav .nav-item.active .nav-link,
   .navbar .navbar-nav .nav-item.active .nav-link:hover,
@@ -51,14 +51,14 @@
   .navbar .navbar-nav .nav-item.show .nav-link:hover,
   .navbar .navbar-nav .nav-item.show .nav-link:focus {
     color: #ffffff;
-    background-color: #0b3311;
+    background-color: #cc0000;
   }
   .navbar .navbar-toggle {
-    border-color: #0b3311;
+    border-color: #cc0000;
   }
   .navbar .navbar-toggle:hover,
   .navbar .navbar-toggle:focus {
-    background-color: #0b3311;
+    background-color: #cc0000;
   }
   /* .navbar .navbar-toggle .navbar-toggler-icon {
     color: #cdcdcd;
@@ -87,7 +87,7 @@
     }
     .navbar-expand-sm .navbar-nav .show .dropdown-menu .dropdown-item.active {
       color: #ffffff;
-      background-color: #0b3311;
+      background-color: #cc0000;
     }
   }
 
@@ -115,7 +115,7 @@
     }
     .navbar-expand-lg .navbar-nav .show .dropdown-menu .dropdown-item.active {
       color: #ffffff;
-      background-color: #0b3311;
+      background-color: #cc0000;
     }
   }
 
@@ -129,7 +129,7 @@
     }
     .navbar-expand-xl .navbar-nav .show .dropdown-menu .dropdown-item.active {
       color: #ffffff;
-      background-color: #0b3311;
+      background-color: #cc0000;
     }
   }
 
@@ -142,5 +142,5 @@
   }
   .navbar-expand .navbar-nav .show .dropdown-menu .dropdown-item.active {
     color: #ffffff;
-    background-color: #0b3311;
+    background-color: #cc0000;
   }
