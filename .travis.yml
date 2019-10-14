@@ -10,9 +10,9 @@ script:
   -p /code test webdriverTest jacocoTestReport
 after_success:
 - if [ "$BRANCH" == "master" ]; then docker run -t -d -v $(pwd):/code:rw --name frc-testing-image-java8
-  team5419/frc-testing-image; docker exec frc-testing-image-java8 /code/gradlew -p
+  team5419/frc-testing-image:version-2018.1.0; docker exec frc-testing-image-java8 /code/gradlew -p
   /code dokkaJavadoc; fi
-- if [ "$BRANCH" == "master" ]; then docker exec frc-testing-image /code/gradlew -p
+- if [ "$BRANCH" == "master" ]; then docker exec frc-testing-image-java8 /code/gradlew -p
   /code publishToTeamRepo --username=$USERNAME --password=$PASSWORD --url=$URL; fi
 - bash <(curl -s https://codecov.io/bash)
 env:
