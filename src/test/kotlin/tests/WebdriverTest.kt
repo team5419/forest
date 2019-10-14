@@ -30,8 +30,11 @@ class WebdriverTest {
         fun init() {
             Dashboard.start(this, "webdriverConfig.json")
             Dashboard.waitForInitialization()
+            println("after dash init")
             driver = WebdriverSetup.getDriver()
+            println("after driver")
             actions = Actions(driver)
+            println("after beforeall")
         }
 
         @AfterAll

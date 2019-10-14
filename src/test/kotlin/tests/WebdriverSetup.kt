@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.remote.RemoteWebDriver
 import org.openqa.selenium.remote.DesiredCapabilities
 
-import org.team5419.tsunami.Utils
+import io.github.bonigarcia.wdm.WebDriverManager
 
 import java.net.URL
 
@@ -15,13 +15,7 @@ object WebdriverSetup {
             val capabilities = DesiredCapabilities.chrome()
             return RemoteWebDriver(URL("http://127.0.0.1:4444/wd/hub"), capabilities)
         } else {
-            if (Utils.isWindows()) {
-                System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\webdrivers\\windows\\chromedriver.exe")
-            } else if (Utils.isMac()) {
-                System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/mac/chromedriver")
-            } else {
-                System.setProperty("webdriver.chrome.driver", "src/test/resources/webdrivers/linux/chromedriver")
-            }
+            WebDriverManager.chromedriver().setup()
             return ChromeDriver()
         }
     }
