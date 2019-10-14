@@ -5,7 +5,7 @@ script:
 - export BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH;
   else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
 - docker run -t --network="host" -d -e TRAVIS='true' -v $(pwd):/code:rw --name frc-testing-image
-  team5419/frc-testing-image:frc2019; docker run -d --network="host" --shm-size=2g
+  team5419/frc-testing-image:latest; docker run -d --network="host" --shm-size=2g
   selenium/standalone-chrome:3.141.59-gold; docker exec frc-testing-image /code/gradlew
   -p /code test webdriverTest jacocoTestReport
 after_success:
