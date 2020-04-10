@@ -4,7 +4,7 @@ import SocketHandler from "socket-handler";
 class Grid extends React.Component {
     constructor(props) {
         super(props);
-        this.PIXELS_PER_CELL = 60.0;
+        // this.PIXELS_PER_CELL = 60.0;
     }
 
     updateCss() {
@@ -27,21 +27,19 @@ class Grid extends React.Component {
     }
 
     getGridWidth() {
-        return Math.floor($(window).width() / this.PIXELS_PER_CELL);
+        // return Math.floor($(window).width() / this.PIXELS_PER_CELL);
+        return 35;
     }
 
     getGridHeight() {
-        return Math.floor($(window).height() / this.PIXELS_PER_CELL);
+        // return Math.floor($(window).height() / this.PIXELS_PER_CELL);
+        return 14;
     }
 
     loadGrid() {
 
-        $(".grid-stack").gridstack({
-            column: this.getGridWidth(),
+        this.grid = $(".grid-stack").gridstack({
             width: this.getGridWidth(),
-            height: this.getGridHeight(),
-            cellHeight: this.PIXELS_PER_CELL,
-            cellWidth: this.PIXELS_PER_CELL,
             auto: true,
             float: true,
             resizable: { autoHide: true, handles: "se" },
@@ -51,6 +49,7 @@ class Grid extends React.Component {
             placeholderClass: "grid-stack-placeholder",
             draggable: {handle: '.ui-draggable-handle' }
         });
+        $('.grid-stack').data('gridstack').grid.width = 35;
         
         $('.grid-stack').on('change', (event, items) => {
             for(var i in items) {
@@ -85,7 +84,7 @@ class Grid extends React.Component {
 
     render() {
         return (
-            <div className="grid-stack" ref={(item) => {this.grid = item}}>
+            <div className="grid-stack" ref={(item) => {this.grid = item}} data-gs-current-row={`${this.getGridWidth()}`} data-gs-height={`${this.getGridHeight()}`}>
                 {PageUtils.renderWidgets()}
             </div>
         );
