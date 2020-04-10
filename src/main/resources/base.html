@@ -7,6 +7,7 @@
     <title>Dashboard - {% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/gridstack.min.css">
     <link rel="stylesheet" href="/css/all.css">
     <link rel="stylesheet" href="/css/main.css">
 
@@ -43,11 +44,15 @@
 
     {% block beforeScripts %}{% endblock %}
     <script src="/javascript/libs/jquery-3.3.1.min.js"></script>
+    <script src="/javascript/libs/jquery-ui.min.js"></script>
+    <script src="/javascript/libs/lodash.min.js"></script>
     <script src="/javascript/libs/popper.min.js"></script>
     <script src="/javascript/libs/tooltip.min.js"></script>
     <script src="/javascript/libs/bootstrap.min.js"></script>
+    <!-- <script src="/javascript/libs/gridstack.min.js"></script>
+    <script src="/javascript/libs/gridstack.jQueryUI.min.js"></script> -->
     {% block afterJSLibs %}{% endblock %}
-    <script src="/javascript/base.js"></script>
+    <script defer src="/javascript/base.js"></script>
     {% block afterJS %}{% endblock %}
 
 </body>
