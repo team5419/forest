@@ -4,11 +4,7 @@ import SocketHandler from "socket-handler";
 class Grid extends React.Component {
     constructor(props) {
         super(props);
-        // this.PIXELS_PER_UNIT = 35.0;
-        this.state = {
-            gridWidth: this.getGridWidth(),
-            gridHeight: this.getGridHeight()
-        }
+        this.PIXELS_PER_CELL = 60.0;
     }
 
     updateCss() {
@@ -31,24 +27,21 @@ class Grid extends React.Component {
     }
 
     getGridWidth() {
-        return 35;
+        return Math.floor($(window).width() / this.PIXELS_PER_CELL);
     }
 
     getGridHeight() {
-        return 14;
+        return Math.floor($(window).height() / this.PIXELS_PER_CELL);
     }
 
     loadGrid() {
-        this.state = {
-            gridWidth: this.getGridWidth(),
-            gridHeight: this.getGridHeight()
-        }
-        console.log("create grid")
+
         $(".grid-stack").gridstack({
+            column: this.getGridWidth(),
             width: this.getGridWidth(),
             height: this.getGridHeight(),
-            cellWidth: 60,
-            cellHeight: 60,
+            cellHeight: this.PIXELS_PER_CELL,
+            cellWidth: this.PIXELS_PER_CELL,
             auto: true,
             float: true,
             resizable: { autoHide: true, handles: "se" },
@@ -58,7 +51,7 @@ class Grid extends React.Component {
             placeholderClass: "grid-stack-placeholder",
             draggable: {handle: '.ui-draggable-handle' }
         });
-        console.log("created grid")
+        
         $('.grid-stack').on('change', (event, items) => {
             for(var i in items) {
                 let newX = items[i].x;
@@ -79,7 +72,7 @@ class Grid extends React.Component {
 
     componentDidMount() {
         console.log('mount');
-        // this.loadGrid();
+        this.loadGrid();
         // this.updateCss();
     }
 
@@ -91,9 +84,8 @@ class Grid extends React.Component {
     }
 
     render() {
-        console.log(`render: ${this.state.gridWidth} : ${this.state.gridHeight}`);
         return (
-            <div className="grid-stack" ref={(item) => {this.grid = item}} data-gs-width={`${this.state.gridWidth}`} data-gs-height={`${this.state.gridHeight}`}>
+            <div className="grid-stack" ref={(item) => {this.grid = item}}>
                 {PageUtils.renderWidgets()}
             </div>
         );
