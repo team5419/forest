@@ -32,7 +32,6 @@ export default class PageUtils {
             success: function () {
             },
             error: function (jqxhr, status, error) {
-
                 console.warn('error sending config json: ' + status + ' : ' + error);
             }
         });
