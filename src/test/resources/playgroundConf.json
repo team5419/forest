@@ -14,7 +14,7 @@
           "variables": {
             "target": "TEST"
           },
-          "width": "12rem"
+          "width": "3"
         },
         {
           "height": "300px",
@@ -43,7 +43,7 @@
           "variables": {
             "target": "AUTO_MODE"
           },
-          "width": "12rem"
+          "width": "3"
         },
         {
           "height": "auto",
@@ -54,7 +54,7 @@
           "variables": {
             "target": "DEEK"
           },
-          "width": "12rem"
+          "width": "3"
         },
         {
           "height": "auto",
@@ -65,7 +65,7 @@
           "variables": {
             "target": "INTEG"
           },
-          "width": "12rem"
+          "width": "3"
         },
         {
           "height": "auto",
@@ -76,7 +76,7 @@
           "variables": {
             "target": "DOUBLE"
           },
-          "width": "12rem"
+          "width": "3"
         },
         {
           "height": "auto",
@@ -90,7 +90,7 @@
             "itarget": "KI",
             "ptarget": "KP"
           },
-          "width": "12rem"
+          "width": "3"
         },
         {
           "height": "auto",
@@ -103,7 +103,7 @@
             "itarget": "KI2",
             "ptarget": "KP2"
           },
-          "width": "12rem"
+          "width": "3"
         }
       ]
     }
