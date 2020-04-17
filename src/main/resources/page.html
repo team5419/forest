@@ -22,10 +22,11 @@
 {% block body %}{% endblock %}
 {% block beforeScripts %}{% endblock %}
 {% block afterJSLibs %}
+    <script src="/javascript/libs/gridstack.all.js"></script>
     <script src="/javascript/libs/babel.min.js"></script>
     <script src="/javascript/libs/react.production.min.js"></script>
     <script src="/javascript/libs/react-dom.production.min.js"></script>
-    <script src="/javascript/libs/gridstack.all.js"></script>
+    
 
 {% endblock %}
 {% block afterJS %}
@@ -34,6 +35,7 @@
 <script src="/javascript/page-utils.jsx" data-plugins="transform-es2015-modules-umd" type="text/babel"></script>
 <script src="/javascript/page.jsx" data-plugins="transform-es2015-modules-umd" type="text/babel"></script>
 <script src="/javascript/widget.jsx" data-plugins="transform-es2015-modules-umd" type="text/babel"></script>
+<script src="/javascript/grid.jsx" data-plugins="transform-es2015-modules-umd" type="text/babel"></script>
 
 <script src="/javascript/widgets/string-editor.jsx" data-plugins="transform-es2015-modules-umd" type="text/babel"></script>
 <script src="/javascript/widgets/int-editor.jsx" data-plugins="transform-es2015-modules-umd" type="text/babel"></script>

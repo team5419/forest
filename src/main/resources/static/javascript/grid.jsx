@@ -2,15 +2,17 @@ import PageUtils from "page-utils";
 
 export default class Grid extends React.Component{ //will go to page-utls
     
-    constructor(widgets){
-        
+    constructor(props){
+        super(props)
 
     }
 
     render(){
-        return {
-
-
-        }
+        return (
+            <div className="grid-stack">
+                {PageUtils.renderWidgets()}
+            </div>
+        )
+            
     }
 }

@@ -1,5 +1,6 @@
 import {WidgetContainer, WidgetBody, WidgetSettings} from "widget-components";
 
+
 let widgetClasses = {};
 let config = {};
 
@@ -90,12 +91,24 @@ export default class PageUtils {
         return `${widget.type}`;
     }
 
-    static renderWidgets() {
+    static renderWidgets() { //grid goes here
         let widgetsJson = PageUtils.getPageWidgets();
+        
+
         let widgets = [];
         for(var i in widgetsJson) {
             let widget = widgetsJson[i];
-            widgets.push(<WidgetContainer key={widget.id} widgetConfig={widget} widgetClass={widgetClasses[widget.type]} getWidgetConfig={() => PageUtils.getPageWidget(widget.id)} setWidgetConfig={(id, conf) => PageUtils.setPageWidget(id, conf)} />);
+            widgets.push(
+                <div className="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="4">
+                    <div class="grid-stack-item-content">
+
+                    
+             <WidgetContainer key={widget.id} widgetConfig={widget} widgetClass={widgetClasses[widget.type]} getWidgetConfig={() => PageUtils.getPageWidget(widget.id)} setWidgetConfig={(id, conf) => PageUtils.setPageWidget(id, conf)} 
+             
+            />
+            </div>
+            </div>
+            );
         }
         return widgets;
     }
