@@ -1,15 +1,15 @@
 import PageUtils from "page-utils";
 import SocketHandler from "socket-handler";
-import Grid from "grid";
+import Grids from "grid";
 
 $(function() { // runs when document finishes loading
     if(PageUtils.loadPageConfig()) {
         SocketHandler.connect(PageUtils.getWebSocketPageAddress());
         ReactDOM.render(
             <div>
-            <Grid>
-            </Grid>
-            {GridStack.init()}
+            <Grids />
+            
+            {alert("re")}
            </div>,
             $('#reactapp')[ 0 ]
         );

@@ -1,17 +1,18 @@
 import PageUtils from "page-utils";
-import React, { Component } from 'react';
 
-export default class Grid extends Component{ //will go to page-utls
+
+export default class Grids extends React.Component{ //will go to page-utls
     
     constructor(props){
         super(props)
         
     }
 
-    render(){
+    render() {
         return (
             <div>
                 <div className="grid-stack"></div>
+                
                 {this.init()}
 
             </div>
