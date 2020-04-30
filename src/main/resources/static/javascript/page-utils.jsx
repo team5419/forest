@@ -99,8 +99,9 @@ export default class PageUtils {
         for(var i in widgetsJson) {
             let widget = widgetsJson[i];
             widgets.push(
-                // <div className="grid-stack-item" data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="4">
-                <div>
+                <div className="grid-stack-item">
+           
+                {/* data-gs-x="4" data-gs-y="0" data-gs-width="4" data-gs-height="4" */}
                 
 
           
@@ -111,6 +112,13 @@ export default class PageUtils {
             
              </div>
              </div>
+
+            // <grid-stack-item data-gs-x="0" data-gs-y="0" data-gs-width="1" data-gs-height="1">
+            //     <div class="grid-stack-item-content ui-draggable-handle">
+            // <p>Widget!!</p>
+            // </div></grid-stack-item>
+            
+
             );
         }
         return widgets;
