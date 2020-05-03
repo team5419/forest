@@ -35,7 +35,7 @@ export default class Grid extends React.Component{ //will go to page-utls
         this.grid = GridStack.init();
        
 
-        this.widgets = PageUtils.renderWidgets();
+        // this.widgets = PageUtils.renderWidgets();
 
         for (var i =0; this.props.children.length; i++){
             this.grid.addWidget(this.props.children[i].toString(), 0, 0, 1, 1, true);
