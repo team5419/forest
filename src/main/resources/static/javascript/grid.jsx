@@ -8,10 +8,10 @@ export default class Grid extends React.Component{ //will go to page-utls
         super(props)
     }
     componentDidMount(){
-        this.widgets = $('.widget');
-        console.log(this.grid);
-        this.widgets.each((i, widget) => {
-            this.grid.addWidget(widget, 0, 0, 12%i, i, true);
+        this.grid = GridStack.init({
+            draggable: {handle: '.widget-title'}
+            ,row: 10
+            ,column : 12
         });
     }
 

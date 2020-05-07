@@ -44,7 +44,7 @@ export class WidgetContainer extends React.Component {
 
     render() {
         return (
-            <div className='widget card m-1' style={{width: this.props.widgetConfig.width, height: this.props.widgetConfig.height, display:'inline-block'}}>
+            <div className='widget card m-1 grid-stack-item' /*data-gs-width={this.props.width} data-gs-height={this.props.height}*/ style={{width: this.props.widgetConfig.width, height: this.props.widgetConfig.height, display:'inline-block'}}>
                 <div className='card-header p-1'>
                     <WidgetTitle getWidgetConfig={() => this.props.getWidgetConfig(this.props.widgetConfig.id)} setWidgetConfig={(json) => this.props.setWidgetConfig(this.props.widgetConfig.id, json)} />
                     <button className='btn btn-light float-right d-inline p-0 m-1' type='button' data-toggle='modal' data-target={'#' + this.props.widgetConfig.id + '_modal'}><h5 className='fas fa-cog m-0'></h5></button>
@@ -95,7 +95,7 @@ export class WidgetContainer extends React.Component {
 export class WidgetBody extends React.Component {
     render() {
         return (
-            <div className={'card-body p-2 show'}>
+            <div className={'card-body p-2 show gridstack-item-content'}>
                 {this.props.children}
             </div>
         );
@@ -163,7 +163,7 @@ export class WidgetTitle extends React.Component {
         if(this.state.isEditing) {
             return <input placeholder='title' ref={(input) => { this.titleInput = input }} type='text' className='form-control d-inline m-0' onChange={(e) => this.updateTitle(e)} onBlur={(e) => this.setTitle(e)} value={this.state.title} />;
         } else {
-            return <h4 className='m-0 d-inline'>{this.state.title}</h4>;
+            return <h4 className='m-0 d-inline widget-title'>{this.state.title}</h4>;
         }
     }
 }
