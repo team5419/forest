@@ -5,18 +5,17 @@ import Grid from "grid";
 $(function() { // runs when document finishes loading
     if(PageUtils.loadPageConfig()) {
         SocketHandler.connect(PageUtils.getWebSocketPageAddress());
+        console.log("render")
         ReactDOM.render(
             <div>
                 {console.log("Loading grid")}
             <Grid>
                 {PageUtils.renderWidgets()}
-                </Grid> 
-            
-            
-            
+            </Grid>
            </div>,
             $('#reactapp')[ 0 ]
         );
+        console.log("render")
     } else {
         let err = textStatus + ', ' + error;
         ReactDOM.render(

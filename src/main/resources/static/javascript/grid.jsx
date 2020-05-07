@@ -1,15 +1,25 @@
 import PageUtils from "page-utils";
+import { renderToString } from 'react-dom'
 
 
 export default class Grid extends React.Component{ //will go to page-utls
     
     constructor(props){
         super(props)
-
-        
     }
     componentDidMount(){
-        this.init()
+        console.log("componentDidMount")
+        this.grid = GridStack.init();
+        console.log("grid init")
+        this.widgets = $('.widget')
+
+        console.log("render widgets", this.widgets)
+        this.widgets.each((_, widget) => {
+
+            console.log(widget, widget[0]);
+            this.grid.addWidget(widget, 0, 0, 1, 1, true);
+
+        });
     }
 
     render() {
@@ -17,35 +27,13 @@ export default class Grid extends React.Component{ //will go to page-utls
             <div>
                 <div className="grid-stack">
                     {this.props.children}
-                    </div>
-
-                
-
+                </div>
             </div>
-            
-        )
-            
+        )  
     }
+
     addWidget(el){
+        console.log(el);
         this.grid.addWidget(el);
     }
-    
-    init(){
-
-        this.grid = GridStack.init();
-       
-
-        // this.widgets = PageUtils.renderWidgets();
-
-        for (var i =0; this.props.children.length; i++){
-            this.grid.addWidget(this.props.children[i].toString(), 0, 0, 1, 1, true);
-        }
- 
-  
-        
-
-    }
-    
-        
-    
 }

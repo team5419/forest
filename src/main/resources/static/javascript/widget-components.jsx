@@ -44,7 +44,7 @@ export class WidgetContainer extends React.Component {
 
     render() {
         return (
-            <div className='card m-1' style={{width: this.props.widgetConfig.width, height: this.props.widgetConfig.height, display:'inline-block'}}>
+            <div className='widget card m-1' style={{width: this.props.widgetConfig.width, height: this.props.widgetConfig.height, display:'inline-block'}}>
                 <div className='card-header p-1'>
                     <WidgetTitle getWidgetConfig={() => this.props.getWidgetConfig(this.props.widgetConfig.id)} setWidgetConfig={(json) => this.props.setWidgetConfig(this.props.widgetConfig.id, json)} />
                     <button className='btn btn-light float-right d-inline p-0 m-1' type='button' data-toggle='modal' data-target={'#' + this.props.widgetConfig.id + '_modal'}><h5 className='fas fa-cog m-0'></h5></button>
