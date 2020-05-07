@@ -163,7 +163,7 @@ export class WidgetTitle extends React.Component {
         if(this.state.isEditing) {
             return <input placeholder='title' ref={(input) => { this.titleInput = input }} type='text' className='form-control d-inline m-0' onChange={(e) => this.updateTitle(e)} onBlur={(e) => this.setTitle(e)} value={this.state.title} />;
         } else {
-            return <h4 className='m-0 d-inline' onClick={(e) => this.edit(e)}>{this.state.title}</h4>;
+            return <h4 className='m-0 d-inline'>{this.state.title}</h4>;
         }
     }
 }

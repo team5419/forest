@@ -7,12 +7,9 @@ $(function() { // runs when document finishes loading
         SocketHandler.connect(PageUtils.getWebSocketPageAddress());
         console.log("render")
         ReactDOM.render(
-            <div>
-                {console.log("Loading grid")}
             <Grid>
                 {PageUtils.renderWidgets()}
-            </Grid>
-           </div>,
+            </Grid>,
             $('#reactapp')[ 0 ]
         );
         console.log("render")

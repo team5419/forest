@@ -93,29 +93,15 @@ export default class PageUtils {
 
     static renderWidgets() { //grid goes here
         let widgetsJson = PageUtils.getPageWidgets();
-        
-
         let widgets = [];
         for(var i in widgetsJson) {
             let widget = widgetsJson[i];
             widgets.push(
-               
-           
-            
-                
-
-          
                 <div className="grid-stack-item" data-gs-x={i} data-gs-y={i} data-gs-width="4" data-gs-height="2">
-                <div className="grid-stack-item-content">
-                <WidgetContainer key={widget.id} widgetConfig={widget} widgetClass={widgetClasses[widget.type]} getWidgetConfig={() => PageUtils.getPageWidget(widget.id)} setWidgetConfig={(id, conf) => PageUtils.setPageWidget(id, conf)} 
-             
-                />
-                <p>reee</p>
-             </div>
-             </div>
-
-            
-
+                    <div className="grid-stack-item-content">
+                        <WidgetContainer key={widget.id} widgetConfig={widget} widgetClass={widgetClasses[widget.type]} getWidgetConfig={() => PageUtils.getPageWidget(widget.id)} setWidgetConfig={(id, conf) => PageUtils.setPageWidget(id, conf)} />
+                    </div>
+                </div>
             );
         }
         return widgets;

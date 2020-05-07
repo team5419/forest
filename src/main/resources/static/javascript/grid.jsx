@@ -8,27 +8,18 @@ export default class Grid extends React.Component{ //will go to page-utls
         super(props)
     }
     componentDidMount(){
-        console.log("componentDidMount")
-        this.grid = GridStack.init();
-        console.log("grid init")
-        this.widgets = $('.widget')
-
-        console.log("render widgets", this.widgets)
-        this.widgets.each((_, widget) => {
-
-            console.log(widget, widget[0]);
-            this.grid.addWidget(widget, 0, 0, 1, 1, true);
-
+        this.widgets = $('.widget');
+        console.log(this.grid);
+        this.widgets.each((i, widget) => {
+            this.grid.addWidget(widget, 0, 0, 12%i, i, true);
         });
     }
 
     render() {
         return (
-            <div>
-                <div className="grid-stack">
-                    {this.props.children}
-                </div>
-            </div>
+            <div className="grid-stack">
+                {this.props.children}
+            </div>        
         )  
     }
 
