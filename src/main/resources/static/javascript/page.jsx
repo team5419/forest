@@ -12,7 +12,6 @@ $(function() { // runs when document finishes loading
             </Grid>,
             $('#reactapp')[ 0 ]
         );
-        console.log("render")
     } else {
         let err = textStatus + ', ' + error;
         ReactDOM.render(

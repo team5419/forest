@@ -8,11 +8,12 @@ export default class Grid extends React.Component{ //will go to page-utls
         super(props)
     }
     componentDidMount(){
-        this.grid = GridStack.init({
+        this.options = {
             draggable: {handle: '.widget-title'}
             ,row: 10
             ,column : 12
-        });
+        }
+        this.grid = GridStack.init(this.options);
     }
 
     render() {

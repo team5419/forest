@@ -5,8 +5,7 @@
       "navbarOrder": 0,
       "title": "Development",
       "widgets": [
-        {
-          "height": "auto",
+        {       
           "id": "testVarEditor",
           "kwargs": {},
           "title": "Test Variable",
@@ -14,10 +13,10 @@
           "variables": {
             "target": "TEST"
           },
-          "width": "3"
+          "height": "2", 
+          "width": "2"
         },
-        {
-          "height": "300px",
+        {       
           "id": "cameraFeed",
           "kwargs": {
             "imgSize": {
@@ -32,10 +31,10 @@
           },
           "title": "Live Video Feed",
           "type": "CameraWidget",
-          "width": "338px"
+          "height": "4",
+          "width": "3"
         },
-        {
-          "height": "auto",
+        {         
           "id": "dropdownSelector",
           "kwargs": {},
           "title": "Auto Variable",
@@ -43,10 +42,10 @@
           "variables": {
             "target": "AUTO_MODE"
           },
-          "width": "3"
+          "height": "2",
+          "width": "2"
         },
-        {
-          "height": "auto",
+        {         
           "id": "deekVarEditor",
           "kwargs": {},
           "title": "Deek Variable",
@@ -54,10 +53,10 @@
           "variables": {
             "target": "DEEK"
           },
-          "width": "3"
+          "height": "2",
+          "width": "2"
         },
-        {
-          "height": "auto",
+        {         
           "id": "intVarEditor",
           "kwargs": {},
           "title": "Int Variable",
@@ -65,10 +64,10 @@
           "variables": {
             "target": "INTEG"
           },
-          "width": "3"
+          "height": "2",
+          "width": "2"
         },
-        {
-          "height": "auto",
+        {       
           "id": "doubleVarEditor",
           "kwargs": {},
           "title": "Double Variable",
@@ -76,10 +75,10 @@
           "variables": {
             "target": "DOUBLE"
           },
-          "width": "3"
+          "height": "2",
+          "width": "2"
         },
         {
-          "height": "auto",
           "id": "pidfEditor",
           "kwargs": {},
           "title": "PIDF Variable",
@@ -90,10 +89,11 @@
             "itarget": "KI",
             "ptarget": "KP"
           },
-          "width": "3"
+          "height": "4",
+          "width": "2"
         },
         {
-          "height": "auto",
+          
           "id": "pidEditor",
           "kwargs": {},
           "title": "PID Variable",
@@ -103,7 +103,8 @@
             "itarget": "KI2",
             "ptarget": "KP2"
           },
-          "width": "3"
+          "height": "4",
+          "width": "2"
         }
       ]
     }
